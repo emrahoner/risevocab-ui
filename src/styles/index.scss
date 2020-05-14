@@ -1,0 +1,66 @@
+@import './card.scss';
+@import './slide.scss';
+@import './text.scss';
+
+$spacing-coeffient: 5;
+
+.full-height {
+    height: 100%;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.app-content {
+    flex: 1;
+}
+
+.app-menu {
+    flex-shrink: 1;
+    border-top: 1px solid #aaa;
+}
+
+.right {
+    float: right;
+}
+
+@for $i from 1 through 10 {
+    .m-#{$i * $spacing-coeffient} {
+        margin: #{$i * $spacing-coeffient}px;
+    }
+    .mt-#{$i * $spacing-coeffient} {
+        margin-top: #{$i * $spacing-coeffient}px;
+    }
+    .mb-#{$i * $spacing-coeffient} {
+        margin-bottom: #{$i * $spacing-coeffient}px;
+    }
+    .ml-#{$i * $spacing-coeffient} {
+        margin-left: #{$i * $spacing-coeffient}px;
+    }
+    .mr-#{$i * $spacing-coeffient} {
+        margin-right: #{$i * $spacing-coeffient}px;
+    }
+    .p-#{$i * $spacing-coeffient} {
+        padding: #{$i * $spacing-coeffient}px;
+    }
+    .pt-#{$i * $spacing-coeffient} {
+        padding-top: #{$i * $spacing-coeffient}px;
+    }
+    .pb-#{$i * $spacing-coeffient} {
+        padding-bottom: #{$i * $spacing-coeffient}px;
+    }
+    .pl-#{$i * $spacing-coeffient} {
+        padding-left: #{$i * $spacing-coeffient}px;
+    }
+    .pr-#{$i * $spacing-coeffient} {
+        padding-right: #{$i * $spacing-coeffient}px;
+    }
+}
